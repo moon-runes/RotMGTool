@@ -8,15 +8,15 @@
     using System.Windows.Forms;
     public partial class View : Form
     {
-        public Viewpoint Viewpoint;
-        public View()
+        public Viewport Viewport;
+        public View(string text, string icon)
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = Window.Bounds;
-            Text = "RotMGTool";
-            Icon = new Icon("rotmgtool.ico");
+            Text = text;
+            Icon = new Icon(icon);
             InitializeAsync();
         }
 
@@ -31,9 +31,9 @@
 
         private void FirstTimeStartup()
         {
-            Viewpoint = new Startup();
-            Viewpoint.Draw();
-            Viewpoint.Listeners();
+            Viewport = new Startup();
+            Viewport.Draw();
+            Viewport.Listeners();
         }
 
         public string BrowseForFolder()

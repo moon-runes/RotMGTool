@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="display\dialogs\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display\dialogs\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="display\content\Startup.cs" />
     <Compile Include="display\elements\TextButton.cs">
       <SubType>Component</SubType>
@@ -64,7 +70,7 @@
     <Compile Include="display\elements\TextInputField.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="display\Viewpoint.cs" />
+    <Compile Include="display\Viewport.cs" />
     <Compile Include="display\View.cs">
       <SubType>Form</SubType>
     </Compile>

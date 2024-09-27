@@ -6,6 +6,7 @@
     using System.Security.Cryptography;
     using System.Windows.Forms;
     using System.Xml.Linq;
+    using View = View;
 
     public class TextField : Label
     {
@@ -15,15 +16,37 @@
             Font = Tool.Fonts.GetFont(type, size);
         }
 
-        public void Init(string text, Viewpoint view = null)
+        public void Init(string text, Viewport view = null)
         {
             if (view == null)
-                view = Tool.View.Viewpoint;
+                view = Tool.View.Viewport;
             if (view == null)
                 return;
 
             Text = text;
-            view.AddToScreen(view, this);
+            view.AddToViewport(view, this);
+        }
+
+        public void Init(string text, View view)
+        {
+            if (view == null)
+                view = Tool.View;
+            if (view == null)
+                return;
+
+            var viewport = view.Viewport;
+            if (viewport == null)
+                viewport = Tool.View.Viewport;
+            if (viewport == null)
+                return;
+
+            Text = text;
+            viewport.AddToView(view, this);
+        }
+
+        public void SetSize(int width, int height)
+        {
+            Size = new Size(width, height);
         }
 
         public void SetPos(int x, int y, int xSpacing = 0, int ySpacing = 0)

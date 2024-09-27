@@ -3,16 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|c:\\users\\kevin\\documents\\github\\rotmgtool\\rotmgtool\\display\\viewport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\viewport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\display\\elements\\textfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\elements\\textfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|c:\\users\\kevin\\documents\\github\\rotmgtool\\rotmgtool\\display\\dialogs\\help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\dialogs\\help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\display\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|c:\\users\\kevin\\documents\\github\\rotmgtool\\rotmgtool\\display\\dialogs\\help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\dialogs\\help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\display\\elements\\textinputfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\elements\\textinputfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|c:\\users\\kevin\\documents\\github\\rotmgtool\\rotmgtool\\display\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\display\\viewpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\viewpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\util\\fontformats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\util\\fontformats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|c:\\users\\kevin\\documents\\github\\rotmgtool\\rotmgtool\\display\\dialogs\\help.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\dialogs\\help.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|c:\\users\\kevin\\documents\\github\\rotmgtool\\rotmgtool\\display\\view.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\view.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|c:\\users\\kevin\\documents\\github\\rotmgtool\\rotmgtool\\util\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\util\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\display\\content\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,26 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\display\\elements\\textbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\elements\\textbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|c:\\users\\kevin\\documents\\github\\rotmgtool\\rotmgtool\\util\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\util\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\display\\elements\\textfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\elements\\textfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\display\\elements\\textinputfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\display\\elements\\textinputfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\rotmgtool\\util\\fontformats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9CA0F5B-8DE5-4ABA-BB3B-1930AA893A0A}|RotMGTool\\RotMGTool.csproj|solutionrelative:rotmgtool\\util\\fontformats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,49 +66,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Viewport.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\Viewport.cs",
+              "RelativeDocumentMoniker": "RotMGTool\\display\\Viewport.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\Viewport.cs",
+              "RelativeToolTip": "RotMGTool\\display\\Viewport.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAApwJwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T03:23:37.839Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Tool.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\Tool.cs",
+              "RelativeDocumentMoniker": "RotMGTool\\Tool.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\Tool.cs",
+              "RelativeToolTip": "RotMGTool\\Tool.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAqwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T03:16:17.717Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Help.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\dialogs\\Help.cs",
+              "RelativeDocumentMoniker": "RotMGTool\\display\\dialogs\\Help.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\dialogs\\Help.cs",
+              "RelativeToolTip": "RotMGTool\\display\\dialogs\\Help.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAQwA8AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:24:33.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Help.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\dialogs\\Help.Designer.cs",
+              "RelativeDocumentMoniker": "RotMGTool\\display\\dialogs\\Help.Designer.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\dialogs\\Help.Designer.cs",
+              "RelativeToolTip": "RotMGTool\\display\\dialogs\\Help.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:23:45.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Help.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\dialogs\\Help.cs",
+              "RelativeDocumentMoniker": "RotMGTool\\display\\dialogs\\Help.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\dialogs\\Help.cs [Design]",
+              "RelativeToolTip": "RotMGTool\\display\\dialogs\\Help.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:23:36.824Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "View.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\View.Designer.cs",
+              "RelativeDocumentMoniker": "RotMGTool\\display\\View.Designer.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\View.Designer.cs",
+              "RelativeToolTip": "RotMGTool\\display\\View.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:23:11.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "View.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\View.cs",
               "RelativeDocumentMoniker": "RotMGTool\\display\\View.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\View.cs [Design]*",
-              "RelativeToolTip": "RotMGTool\\display\\View.cs [Design]*",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\View.cs [Design]",
+              "RelativeToolTip": "RotMGTool\\display\\View.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T05:10:12.449Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "TextInputField.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\elements\\TextInputField.cs",
               "RelativeDocumentMoniker": "RotMGTool\\display\\elements\\TextInputField.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\elements\\TextInputField.cs",
               "RelativeToolTip": "RotMGTool\\display\\elements\\TextInputField.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAuwBgAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T04:02:06.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Window.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\util\\Window.cs",
               "RelativeDocumentMoniker": "RotMGTool\\util\\Window.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\util\\Window.cs",
               "RelativeToolTip": "RotMGTool\\util\\Window.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAzAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAAwD0AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T03:51:25.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "TextButton.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\elements\\TextButton.cs",
               "RelativeDocumentMoniker": "RotMGTool\\display\\elements\\TextButton.cs",
@@ -105,20 +200,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "TextField.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\elements\\TextField.cs",
               "RelativeDocumentMoniker": "RotMGTool\\display\\elements\\TextField.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\elements\\TextField.cs",
               "RelativeToolTip": "RotMGTool\\display\\elements\\TextField.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAwwAkAAAAiAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAIAwwCsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T03:30:00.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "FontFormats.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\util\\FontFormats.cs",
               "RelativeDocumentMoniker": "RotMGTool\\util\\FontFormats.cs",
@@ -131,54 +226,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "View.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\View.cs",
               "RelativeDocumentMoniker": "RotMGTool\\display\\View.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\View.cs*",
-              "RelativeToolTip": "RotMGTool\\display\\View.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAgAAAA",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\View.cs",
+              "RelativeToolTip": "RotMGTool\\display\\View.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T03:25:09.41Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Viewpoint.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\Viewpoint.cs",
-              "RelativeDocumentMoniker": "RotMGTool\\display\\Viewpoint.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\Viewpoint.cs",
-              "RelativeToolTip": "RotMGTool\\display\\Viewpoint.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAMwDkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T03:23:37.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\content\\Startup.cs",
               "RelativeDocumentMoniker": "RotMGTool\\display\\content\\Startup.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\display\\content\\Startup.cs",
               "RelativeToolTip": "RotMGTool\\display\\content\\Startup.cs",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAewIcAAAAAAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAhwDgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T03:16:26.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Tool.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\Tool.cs",
-              "RelativeDocumentMoniker": "RotMGTool\\Tool.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\RotMGTool\\RotMGTool\\Tool.cs",
-              "RelativeToolTip": "RotMGTool\\Tool.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAMwBUAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T03:16:17.717Z",
               "EditorCaption": ""
             }
           ]

@@ -2,23 +2,31 @@
 {
     using RotMGTool.display.elements;
     using RotMGTool.util;
+    using System;
     using System.Collections.Generic;
     using System.Drawing;
     using System.Windows.Forms;
+    using Help = dialogs.Help;
+    using View = View;
 
-    public class Viewpoint
+    public class Viewport
     {
-        static string Copyright = "© moon-runes 2024.";
+        public static string Copyright = "© moon-runes 2024.";
+        public static string Header = "";
+        public static string Information = "";
+
+        public Help Help;
 
         public TextField Watermark;
         public TextField Name;
         public TextField Desc;
         public TextButton Button;
+        public TextButton HelpButton;
 
         public static int padding = 70;
         public static int offset;
 
-        public Viewpoint(int w, int h, string n, string d = "") 
+        public Viewport(int w, int h, string n, string d = "") 
         {
             if (Tool.View == null)
                 return;
@@ -56,6 +64,14 @@
                 Tool.View.ClientSize = targetSize;
         }
 
+        public void AddHelpButton(string anchor)
+        {
+            HelpButton = new TextButton(30, 30);
+            HelpButton.Init("?", this);
+            
+            Window.AnchorTo[anchor](HelpButton, 5);
+        }
+
         public void AddButton(int w, int h, string name, bool bold)
         {
             Button = new TextButton(w, h);
@@ -76,25 +92,10 @@
         public void addButtonHandlers(. . .) { } 
         */ 
 
-        public void AddToScreen(Viewpoint view, Control obj)
+        public List<Control> CreateObjectPool(View view)
         {
             if (Tool.ObjectPool == null)
-                Tool.ObjectPool = new Dictionary<Viewpoint, List<Control>>();
-            if (!Tool.ObjectPool.TryGetValue(view, out var pool))
-            {
-                pool = new List<Control>();
-                Tool.ObjectPool[view] = pool;
-            }
-
-            Tool.View.Controls.Add(obj);
-            pool.Add(obj);
-            Tool.ObjectPool[view] = pool;
-        }
-
-        public List<Control> CreateObjectPool(Viewpoint view)
-        {
-            if (Tool.ObjectPool == null)
-                Tool.ObjectPool = new Dictionary<Viewpoint, List<Control>>();
+                Tool.ObjectPool = new Dictionary<View, List<Control>>();
             if (!Tool.ObjectPool.TryGetValue(view, out var pool))
             {
                 pool = new List<Control>();
@@ -103,31 +104,82 @@
             return pool;
         }
 
-        public void RemoveFromView(Viewpoint view, Control obj)
+        public List<Control> CreateObjectPoolViewport(Viewport view)
         {
-            List<Control> pool = Tool.ObjectPool[view];
+            if (Tool.ObjectPoolViewport == null)
+                Tool.ObjectPoolViewport = new Dictionary<Viewport, List<Control>>();
+            if (!Tool.ObjectPoolViewport.TryGetValue(view, out var pool))
+            {
+                pool = new List<Control>();
+                Tool.ObjectPoolViewport[view] = pool;
+            }
+            return pool;
+        }
+
+        public void AddToViewport(Viewport view, Control obj)
+        {
+            if (Tool.ObjectPoolViewport == null)
+                Tool.ObjectPoolViewport = new Dictionary<Viewport, List<Control>>();
+            if (!Tool.ObjectPoolViewport.TryGetValue(view, out var pool))
+            {
+                pool = new List<Control>();
+                Tool.ObjectPoolViewport[view] = pool;
+            }
+
+            Tool.View.Controls.Add(obj);
+            pool.Add(obj);
+            Tool.ObjectPoolViewport[view] = pool;
+        }
+
+        public void RemoveFromViewport(Viewport view, Control obj)
+        {
+            List<Control> pool = Tool.ObjectPoolViewport[view];
             foreach (var objs in pool)
                 if (objs == obj)
                 {
                     Tool.View.Controls.Remove(obj);
                     pool.Remove(obj);
                 }
-            Tool.ObjectPool[view] = pool;
+            Tool.ObjectPoolViewport[view] = pool;
         }
 
-        public void RemoveAllFromView(Viewpoint view)
+        public void RemoveAllFromViewport(Viewport view)
         {
-            var controls = Tool.ObjectPool[view];
+            var controls = Tool.ObjectPoolViewport[view];
             foreach (var ctrl in controls)
             {
                 Tool.View.Controls.Remove(ctrl);
                 controls.Remove(ctrl);
             }
-            Tool.ObjectPool[view] = controls;
+            Tool.ObjectPoolViewport[view] = controls;
+        }
+
+        public void AddToView(View view, Control obj)
+        {
+            if (Tool.ObjectPool == null)
+                Tool.ObjectPool = new Dictionary<View, List<Control>>();
+            if (!Tool.ObjectPool.TryGetValue(view, out var pool))
+            {
+                pool = new List<Control>();
+                Tool.ObjectPool[view] = pool;
+            }
+
+            view.Controls.Add(obj);
+            pool.Add(obj);
+            Tool.ObjectPool[view] = pool;
+        }
+
+        private void OpenHelp(object sender, EventArgs e)
+        {
+            Help = new Help(Header, Information);
+            Help.Run();
         }
 
         public virtual void Draw() { }
 
-        public virtual void Listeners() { }
+        public virtual void Listeners() 
+        {
+            HelpButton.Click += new EventHandler(OpenHelp);
+        }
     }
 }

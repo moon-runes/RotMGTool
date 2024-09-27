@@ -18,15 +18,15 @@ namespace RotMGTool.display.elements
             Height = h;
         }
 
-        public void Init(string text, Viewpoint view = null, string type = "Standard", FontSizes size = FontSizes.Normal)
+        public void Init(string text, Viewport view = null, string type = "Standard", FontSizes size = FontSizes.Normal)
         {
             if (view == null)
-                view = Tool.View.Viewpoint;
+                view = Tool.View.Viewport;
             if (view == null)
                 return;
 
             SetText(text, type, size);
-            view.AddToScreen(view, this);
+            view.AddToViewport(view, this);
         }
 
         public void SetText(string text, string type, FontSizes size)

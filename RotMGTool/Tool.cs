@@ -12,14 +12,15 @@ namespace RotMGTool
         public static View View { get; private set; }
         public static FontFormats Fonts { get; private set; }
 
-        public static Dictionary<Viewpoint, List<Control>> ObjectPool;
+        public static Dictionary<View, List<Control>> ObjectPool;
+        public static Dictionary<Viewport, List<Control>> ObjectPoolViewport;
 
         [STAThread]
         public static void Main()
         {
             Application.SetCompatibleTextRenderingDefault(false);
             Fonts = new FontFormats();
-            View = new View();
+            View = new View("RotMGTool", "rotmgtool.ico");
 
             Application.EnableVisualStyles();
             Application.Run(View);

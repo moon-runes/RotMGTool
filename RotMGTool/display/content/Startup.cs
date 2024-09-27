@@ -6,9 +6,9 @@
     using System;
     using System.IO;
     using Formatting = Newtonsoft.Json.Formatting;
-    using Viewpoint = Viewpoint;
+    using Viewport = Viewport;
 
-    internal class Startup : Viewpoint
+    internal class Startup : Viewport
     {
         private string embeddedAssetsPath;
         private string assetLoaderPath;
@@ -90,23 +90,23 @@
 
             embedAssetsBox = new TextInputField(300, 30);
             embedAssetsBox.SetPos(10, 0, 0, padding);
-            embedAssetsBox.Init(embeddedAssetsPath + "1", this);
+            embedAssetsBox.Init(embeddedAssetsPath, this);
 
             assetLoaderBox = new TextInputField(300, 30);
             assetLoaderBox.SetPos(10, 0, 0, padding);
-            assetLoaderBox.Init(assetLoaderPath + "2", this);
+            assetLoaderBox.Init(assetLoaderPath, this);
 
             cliAssetsBox = new TextInputField(300, 30);
             cliAssetsBox.SetPos(10, 0, 0, padding);
-            cliAssetsBox.Init(clientAssetsPath + "3", this);
+            cliAssetsBox.Init(clientAssetsPath, this);
 
             cliXmlBox = new TextInputField(300, 30);
             cliXmlBox.SetPos(10, 0, 0, padding);
-            cliXmlBox.Init(clientXmlsPath + "4", this);
+            cliXmlBox.Init(clientXmlsPath, this);
 
             srcXmlBox = new TextInputField(300, 30);
             srcXmlBox.SetPos(10, 0, 0, padding);
-            srcXmlBox.Init(serverXmlsPath + "5", this);
+            srcXmlBox.Init(serverXmlsPath, this);
         }
 
         private void Buttons()
@@ -137,6 +137,8 @@
             t = "Continue";
             AddButton(160, 40, t, true);
             SetButtonCoords("BottomCenter");
+
+            AddHelpButton("TopRight");
 
             /* If you set the x/y of an element to where it's position is dependent *
              * on the element's height, then you have to Init() the text first.     */
