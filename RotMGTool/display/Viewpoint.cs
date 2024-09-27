@@ -8,6 +8,9 @@
 
     public class Viewpoint
     {
+        static string Copyright = "© moon-runes 2024.";
+
+        public TextField Watermark;
         public TextField Name;
         public TextField Desc;
         public TextButton Button;
@@ -31,6 +34,10 @@
             if (h != windowSize.Height)
                 height = h;
 
+            Watermark = new TextField("Standard", FontSizes.ExtraSmall);
+            Watermark.Init(Copyright, this);
+            Window.AnchorTo["BottomLeft"](Watermark, 5);
+
             Name = new TextField("Bold", FontSizes.Large);
             Name.SetY(10);
             Name.Init(n, this);
@@ -49,10 +56,10 @@
                 Tool.View.ClientSize = targetSize;
         }
 
-        public void AddButton(int w, int h, string name)
+        public void AddButton(int w, int h, string name, bool bold)
         {
             Button = new TextButton(w, h);
-            Button.Init(name, this);
+            Button.Init(name, this, bold ? "Bold" : "Standard");
         }
 
         public void SetButtonCoords(string anchor = "", Point? coords = null)
@@ -94,17 +101,6 @@
                 Tool.ObjectPool[view] = pool;
             }
             return pool;
-        }
-
-        public void BulkAddToView(Viewpoint view, Control[] objects)
-        {
-            List<Control> pool = CreateObjectPool(view);
-            foreach (var obj in objects)
-            {
-                Tool.View.Controls.Add(obj);
-                pool.Add(obj);
-            }
-            Tool.ObjectPool[view] = pool;
         }
 
         public void RemoveFromView(Viewpoint view, Control obj)

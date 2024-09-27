@@ -8,7 +8,8 @@ public enum FontSizes
     Small = 0,
     Normal = 1,
     Large = 2,
-    ExtraLarge = 3
+    ExtraLarge = 3,
+    ExtraSmall = 4
 }
 
 public class FontFormats
@@ -34,7 +35,8 @@ public class FontFormats
             CreateFont(fontName, 10, style),
             CreateFont(fontName, 12, style),
             CreateFont(fontName, 16, style),
-            CreateFont(fontName, 20, style)
+            CreateFont(fontName, 20, style),
+            CreateFont(fontName, 8, style)
         };
     }
     private static Font CreateFont(string fontName, int size, FontStyle style)

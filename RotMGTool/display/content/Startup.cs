@@ -60,7 +60,7 @@
 
         private void Labels()
         {
-            offset = Desc.Location.Y + Desc.Height;
+            offset = Desc.Location.Y + Desc.Height + 6;
             Window.BufferY = offset;
 
             embedAssetsLabel = new TextField("Standard");
@@ -111,7 +111,7 @@
 
         private void Buttons()
         {
-            Window.BufferY = offset + 12;
+            Window.BufferY = offset + 19;
 
             string t = "Browse";
             embedAssetsBrowse = new TextButton(80, 28);
@@ -135,7 +135,7 @@
             srcXmlBrowse.SetPos(320, 0, 0, 70);
 
             t = "Continue";
-            AddButton(160, 40, t);
+            AddButton(160, 40, t, true);
             SetButtonCoords("BottomCenter");
 
             /* If you set the x/y of an element to where it's position is dependent *

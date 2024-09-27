@@ -11,11 +11,12 @@
         public Viewpoint Viewpoint;
         public View()
         {
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = Window.Bounds;
             Text = "RotMGTool";
             Icon = new Icon("rotmgtool.ico");
-
             InitializeAsync();
         }
 
