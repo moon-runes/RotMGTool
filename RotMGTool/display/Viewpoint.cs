@@ -69,65 +69,65 @@
         public void addButtonHandlers(. . .) { } 
         */ 
 
-        public void AddToScreen(Viewpoint scr, Control obj)
+        public void AddToScreen(Viewpoint view, Control obj)
         {
             if (Tool.ObjectPool == null)
                 Tool.ObjectPool = new Dictionary<Viewpoint, List<Control>>();
-            if (!Tool.ObjectPool.TryGetValue(scr, out var pool))
+            if (!Tool.ObjectPool.TryGetValue(view, out var pool))
             {
                 pool = new List<Control>();
-                Tool.ObjectPool[scr] = pool;
+                Tool.ObjectPool[view] = pool;
             }
 
             Tool.View.Controls.Add(obj);
             pool.Add(obj);
-            Tool.ObjectPool[scr] = pool;
+            Tool.ObjectPool[view] = pool;
         }
 
-        public List<Control> CreateObjectPool(Viewpoint scr)
+        public List<Control> CreateObjectPool(Viewpoint view)
         {
             if (Tool.ObjectPool == null)
                 Tool.ObjectPool = new Dictionary<Viewpoint, List<Control>>();
-            if (!Tool.ObjectPool.TryGetValue(scr, out var pool))
+            if (!Tool.ObjectPool.TryGetValue(view, out var pool))
             {
                 pool = new List<Control>();
-                Tool.ObjectPool[scr] = pool;
+                Tool.ObjectPool[view] = pool;
             }
             return pool;
         }
 
-        public void BulkAddToScreen(Viewpoint scr, Control[] objects)
+        public void BulkAddToView(Viewpoint view, Control[] objects)
         {
-            List<Control> pool = CreateObjectPool(scr);
+            List<Control> pool = CreateObjectPool(view);
             foreach (var obj in objects)
             {
                 Tool.View.Controls.Add(obj);
                 pool.Add(obj);
             }
-            Tool.ObjectPool[scr] = pool;
+            Tool.ObjectPool[view] = pool;
         }
 
-        public void RemoveFromScreen(Viewpoint scr, Control obj)
+        public void RemoveFromView(Viewpoint view, Control obj)
         {
-            List<Control> pool = Tool.ObjectPool[scr];
+            List<Control> pool = Tool.ObjectPool[view];
             foreach (var objs in pool)
                 if (objs == obj)
                 {
                     Tool.View.Controls.Remove(obj);
                     pool.Remove(obj);
                 }
-            Tool.ObjectPool[scr] = pool;
+            Tool.ObjectPool[view] = pool;
         }
 
-        public void RemoveAllFromScreen(Viewpoint scr)
+        public void RemoveAllFromView(Viewpoint view)
         {
-            var controls = Tool.ObjectPool[scr];
+            var controls = Tool.ObjectPool[view];
             foreach (var ctrl in controls)
             {
                 Tool.View.Controls.Remove(ctrl);
                 controls.Remove(ctrl);
             }
-            Tool.ObjectPool[scr] = controls;
+            Tool.ObjectPool[view] = controls;
         }
 
         public virtual void Draw() { }

@@ -4,10 +4,7 @@
     using RotMGTool.display.elements;
     using RotMGTool.util;
     using System;
-    using System.ComponentModel.Design.Serialization;
-    using System.Drawing;
     using System.IO;
-    using System.Security.Principal;
     using Formatting = Newtonsoft.Json.Formatting;
     using Viewpoint = Viewpoint;
 

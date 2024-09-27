@@ -59,7 +59,7 @@ namespace RotMGTool.util
 
         public static Dictionary<string, Action<Control, int?>> AnchorTo = new Dictionary<string, Action<Control, int?>>()
         {
-            { "TopLeft", (Control obj, int? padding ) => obj.Location = TopLeft(obj, padding ?? 5) },
+            { "TopLeft", (Control obj, int? padding) => obj.Location = TopLeft(obj, padding ?? 5) },
             { "TopRight", (Control obj, int? padding) => obj.Location = TopRight(obj, padding ?? 5) },
             { "BottomLeft", (Control obj, int? padding) => obj.Location = BottomLeft(obj, padding ?? 5) },
             { "BottomRight", (Control obj, int? padding) => obj.Location = BottomRight(obj, padding ?? 5) },
