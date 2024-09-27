@@ -31,6 +31,11 @@
             }
         }
 
+        public void SetPos(int x, int y)
+        {
+            Location = new Point(x, y);
+        }
+
         public void SetX(int x)
         {
             Location = new Point(x, Location.Y);

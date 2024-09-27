@@ -7,6 +7,7 @@
     using System.IO;
     using Formatting = Newtonsoft.Json.Formatting;
     using Viewpoint = Viewpoint;
+    using RotMGTool.display.elements;
 
     internal class Startup : Viewpoint
     {
@@ -16,11 +17,11 @@
         private string clientXmlsPath;
         private string serverXmlsPath;
 
-        private Label embedAssetsLabel;
-        private Label assetLoaderLabel;
-        private Label cliAssetsLabel;
-        private Label cliXmlLabel;
-        private Label srcXmlLabel;
+        private TextField embedAssetsLabel;
+        private TextField assetLoaderLabel;
+        private TextField cliAssetsLabel;
+        private TextField cliXmlLabel;
+        private TextField srcXmlLabel;
 
         private TextBox embedAssetsBox;
         private TextBox assetLoaderBox;
@@ -79,11 +80,25 @@
         }
         private void Position()
         {
-            embedAssetsLabel = new Label { Text = "EmbeddedAssets.as", Location = new Point(10, 60), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
-            assetLoaderLabel = new Label { Text = "AssetLoader.as", Location = new Point(10, 130), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
-            cliAssetsLabel = new Label { Text = "Assets folder (client)", Location = new Point(10, 200), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
-            cliXmlLabel = new Label { Text = "XMLs folder (client)", Location = new Point(10, 270), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
-            srcXmlLabel = new Label { Text = "XMLs folder (server)", Location = new Point(10, 340), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
+            embedAssetsLabel = new TextField("Standard");
+            embedAssetsLabel.SetPos(10, 60);
+            embedAssetsLabel.Init("EmbeddedAssets.as", "", this);
+
+            assetLoaderLabel = new TextField("Standard");
+            assetLoaderLabel.SetPos(10, 130);
+            assetLoaderLabel.Init("AssetLoader.as", "", this);
+
+            cliAssetsLabel = new TextField("Standard");
+            cliAssetsLabel.SetPos(10, 200);
+            cliAssetsLabel.Init("Assets folder (client)", "", this);
+
+            cliXmlLabel = new TextField("Standard");
+            cliXmlLabel.SetPos(10, 270);
+            cliXmlLabel.Init("XML folder (client)", "", this);
+
+            srcXmlLabel = new TextField("Standard");
+            srcXmlLabel.SetPos(10, 340);
+            srcXmlLabel.Init("XML folder (source)", "", this);
 
             embedAssetsBox = new TextBox { Location = new Point(10, 80), Width = 300, Height = 30, Text = embeddedAssetsPath };
             assetLoaderBox = new TextBox { Location = new Point(10, 150), Width = 300, Height = 30, Text = assetLoaderPath };
