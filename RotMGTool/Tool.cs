@@ -10,12 +10,13 @@ namespace RotMGTool
     internal static class Tool
     {
         public static View View { get; private set; }
-
         public static FontFormats Fonts { get; private set; }
 
         public static Dictionary<Viewpoint, List<Control>> ObjectPool;
-
         public static Size screenSize = new Size(410, 450);
+
+        public static int BufferX = 0;
+        public static int BufferY = 0;
 
         [STAThread]
         public static void Main()
@@ -26,6 +27,12 @@ namespace RotMGTool
 
             Application.EnableVisualStyles();
             Application.Run(View);
+        }
+
+        public static void ResetBuffer()
+        {
+            BufferX = 0;
+            BufferY = 0;
         }
     }
 }

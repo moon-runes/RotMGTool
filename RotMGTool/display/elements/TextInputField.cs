@@ -1,17 +1,20 @@
-﻿namespace RotMGTool.display.elements
-{
-    using System.Drawing;
-    using System.Runtime.CompilerServices;
-    using System.Security.Cryptography;
-    using System.Windows.Forms;
-    using System.Xml.Linq;
+﻿using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-    public class TextField : Label
+namespace RotMGTool.display.elements
+{
+    internal class TextInputField : TextBox
     {
-        public TextField(string type, FontSizes size = FontSizes.Normal, uint color = 0xffffff) : base()
+        public TextInputField(int w = 300, int h = 30) : base()
         {
-            AutoSize = true;
-            Font = Tool.Fonts.GetFont(type, size);
+            Width = w;
+            Height = h;
         }
 
         public void Init(string text, Viewpoint view = null, string center = "")

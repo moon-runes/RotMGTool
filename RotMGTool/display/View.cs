@@ -33,7 +33,7 @@ namespace RotMGTool
         {
             Viewpoint = new Startup();
             Viewpoint.Draw();
-            Viewpoint.AddListeners();
+            Viewpoint.Listeners();
         }
 
         public string BrowseForFolder()

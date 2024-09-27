@@ -23,19 +23,21 @@
         private TextField cliXmlLabel;
         private TextField srcXmlLabel;
 
-        private TextBox embedAssetsBox;
-        private TextBox assetLoaderBox;
-        private TextBox cliAssetsBox;
-        private TextBox cliXmlBox;
-        private TextBox srcXmlBox;
+        private TextInputField embedAssetsBox;
+        private TextInputField assetLoaderBox;
+        private TextInputField cliAssetsBox;
+        private TextInputField cliXmlBox;
+        private TextInputField srcXmlBox;
 
-        private Button embedAssetsBrowse;
-        private Button assetLoaderBrowse;
-        private Button cliAssetsBrowse;
-        private Button cliXmlBrowse;
-        private Button srcXmlBrowse;
+        private TextButton embedAssetsBrowse;
+        private TextButton assetLoaderBrowse;
+        private TextButton cliAssetsBrowse;
+        private TextButton cliXmlBrowse;
+        private TextButton srcXmlBrowse;
 
-        private Button continueButton;
+        private TextButton continueButton;
+
+        static int spacing = 70;
 
         public Startup() : base(410, 450, "RotMGTool v1.0", "First-time startup.")
         {
@@ -43,32 +45,14 @@
         }
         public override void Draw()
         {
-            Position();
-            Tool.View.Controls.Add(embedAssetsLabel);
-            Tool.View.Controls.Add(assetLoaderLabel);
-            Tool.View.Controls.Add(cliAssetsLabel);
-            Tool.View.Controls.Add(cliXmlLabel);
-            Tool.View.Controls.Add(srcXmlLabel);
-
-            Tool.View.Controls.Add(embedAssetsBrowse);
-            Tool.View.Controls.Add(assetLoaderBrowse);
-            Tool.View.Controls.Add(cliAssetsBrowse);
-            Tool.View.Controls.Add(cliXmlBrowse);
-            Tool.View.Controls.Add(srcXmlBrowse);
-
-            Tool.View.Controls.Add(embedAssetsBox);
-            Tool.View.Controls.Add(assetLoaderBox);
-            Tool.View.Controls.Add(cliAssetsBox);
-            Tool.View.Controls.Add(cliXmlBox);
-            Tool.View.Controls.Add(srcXmlBox);
-
-            continueButton = new Button { Text = "Continue", Width = 160, Height = 40 };
-            Tool.View.Controls.Add(continueButton);
-            continueButton.Location = new Point((Tool.screenSize.Width - continueButton.Width) / 2, Tool.screenSize.Height - continueButton.Height - 10);
-            
+            Labels();
+            InputFields();
+            Buttons();
+            Tool.ResetBuffer();
             base.Draw();
         }
-        public override void AddListeners()
+
+        public override void Listeners()
         {
             embedAssetsBrowse.Click += new EventHandler(onBrowseEmbedAssets);
             assetLoaderBrowse.Click += new EventHandler(onBrowseAssetLoader);
@@ -76,42 +60,95 @@
             cliXmlBrowse.Click += new EventHandler(onBrowseCliXml);
             srcXmlBrowse.Click += new EventHandler(onBrowseSrcXml);
 
-            base.AddListeners();
+            base.Listeners();
         }
-        private void Position()
+
+        private void Buttons()
         {
+            Tool.BufferY = 72;
+
+            string t = "Browse";
+            embedAssetsBrowse = new TextButton(80, 28);
+            embedAssetsBrowse.Init(t, this);
+            embedAssetsBrowse.SetPos(320, 0, 0, 70);
+
+            assetLoaderBrowse = new TextButton(80, 28);
+            assetLoaderBrowse.Init(t, this);
+            assetLoaderBrowse.SetPos(320, 0, 0, 70);
+
+            cliAssetsBrowse = new TextButton(80, 28);
+            cliAssetsBrowse.Init(t, this);
+            cliAssetsBrowse.SetPos(320, 0, 0, 70);
+
+            cliXmlBrowse = new TextButton(80, 28);
+            cliXmlBrowse.Init(t, this);
+            cliXmlBrowse.SetPos(320, 0, 0, 70);
+
+            srcXmlBrowse = new TextButton(80, 28);
+            srcXmlBrowse.Init(t, this);
+            srcXmlBrowse.SetPos(320, 0, 0, 70);
+
+            t = "Continue";
+            continueButton = new TextButton(160, 40);
+            continueButton.Init(t, this, "x");
+
+            int y = Tool.screenSize.Height - continueButton.Height - 10;
+            continueButton.SetY(y);
+                    
+             /* If you set the x/y of an element to where it's position is dependent *
+              * on the element's height, then you have to Init() the text first.     */
+        }
+
+        private void Labels()
+        {
+            Tool.BufferY = 60;
+
             embedAssetsLabel = new TextField("Standard");
-            embedAssetsLabel.SetPos(10, 60);
-            embedAssetsLabel.Init("EmbeddedAssets.as", "", this);
+            embedAssetsLabel.SetPos(10, 0, 0, spacing);
+            embedAssetsLabel.Init("EmbeddedAssets.as", this);
 
             assetLoaderLabel = new TextField("Standard");
-            assetLoaderLabel.SetPos(10, 130);
-            assetLoaderLabel.Init("AssetLoader.as", "", this);
+            assetLoaderLabel.SetPos(10, 0, 0, spacing);
+            assetLoaderLabel.Init("AssetLoader.as", this);
 
             cliAssetsLabel = new TextField("Standard");
-            cliAssetsLabel.SetPos(10, 200);
-            cliAssetsLabel.Init("Assets folder (client)", "", this);
+            cliAssetsLabel.SetPos(10, 0, 0, spacing);
+            cliAssetsLabel.Init("Assets folder (client)", this);
 
             cliXmlLabel = new TextField("Standard");
-            cliXmlLabel.SetPos(10, 270);
-            cliXmlLabel.Init("XML folder (client)", "", this);
+            cliXmlLabel.SetPos(10, 0, 0, spacing);
+            cliXmlLabel.Init("XML folder (client)", this);
 
             srcXmlLabel = new TextField("Standard");
-            srcXmlLabel.SetPos(10, 340);
-            srcXmlLabel.Init("XML folder (source)", "", this);
-
-            embedAssetsBox = new TextBox { Location = new Point(10, 80), Width = 300, Height = 30, Text = embeddedAssetsPath };
-            assetLoaderBox = new TextBox { Location = new Point(10, 150), Width = 300, Height = 30, Text = assetLoaderPath };
-            cliAssetsBox = new TextBox { Location = new Point(10, 220), Width = 300, Height = 30, Text = clientAssetsPath };
-            cliXmlBox = new TextBox { Location = new Point(10, 290), Width = 300, Height = 30, Text = clientXmlsPath };
-            srcXmlBox = new TextBox { Location = new Point(10, 360), Width = 300, Height = 30, Text = serverXmlsPath };
-
-            embedAssetsBrowse = new Button { Text = "Browse", Location = new Point(320, 72), Width = 80, Height = 28 };
-            assetLoaderBrowse = new Button { Text = "Browse", Location = new Point(320, 142), Width = 80, Height = 28 };
-            cliAssetsBrowse = new Button { Text = "Browse", Location = new Point(320, 212), Width = 80, Height = 28 };
-            cliXmlBrowse = new Button { Text = "Browse", Location = new Point(320, 282), Width = 80, Height = 28 };
-            srcXmlBrowse = new Button { Text = "Browse", Location = new Point(320, 352), Width = 80, Height = 28 };
+            srcXmlLabel.SetPos(10, 0, 0, spacing);
+            srcXmlLabel.Init("XML folder (source)", this);
         }
+
+        private void InputFields()
+        {
+            Tool.BufferY = 80;
+
+            embedAssetsBox = new TextInputField(300, 30);
+            embedAssetsBox.SetPos(10, 0, 0, spacing);
+            embedAssetsBox.Init(embeddedAssetsPath, this);
+
+            assetLoaderBox = new TextInputField(300, 30);
+            assetLoaderBox.SetPos(10, 0, 0, spacing);
+            assetLoaderBox.Init(assetLoaderPath, this);
+
+            cliAssetsBox = new TextInputField(300, 30);
+            cliAssetsBox.SetPos(10, 0, 0, spacing);
+            cliAssetsBox.Init(clientAssetsPath, this);
+
+            cliXmlBox = new TextInputField(300, 30);
+            cliXmlBox.SetPos(10, 0, 0, spacing);
+            cliXmlBox.Init(clientXmlsPath, this);
+
+            srcXmlBox = new TextInputField(300, 30);
+            srcXmlBox.SetPos(10, 0, 0, spacing);
+            srcXmlBox.Init(serverXmlsPath, this);
+        }
+
         private void onBrowseEmbedAssets(object sender, EventArgs e)
         {
             embeddedAssetsPath = Tool.View.BrowseForFolder();

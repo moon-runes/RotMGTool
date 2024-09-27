@@ -24,13 +24,13 @@
                 height = h;
 
             Name = new TextField("Bold", FontSizes.Large);
-            Name.Init(n, "x", this);
+            Name.Init(n, this, "x");
             Name.SetY(10);
 
             if (d != "")
             {
                 Desc = new TextField("Standard", FontSizes.Small);
-                Desc.Init(d, "x", this);
+                Desc.Init(d, this, "x");
                 Desc.SetY(Name.Location.Y + Name.Height - 3);
             }
 
@@ -120,6 +120,6 @@
             Tool.ObjectPool[scr] = controls;
         }
         public virtual void Draw() { }
-        public virtual void AddListeners() { }
+        public virtual void Listeners() { }
     }
 }
