@@ -6,9 +6,9 @@
     using Newtonsoft.Json;
     using System.IO;
     using Formatting = Newtonsoft.Json.Formatting;
-    using Screen = Screen;
+    using Viewpoint = Viewpoint;
 
-    internal class Startup : Screen
+    internal class Startup : Viewpoint
     {
         private string embeddedAssetsPath;
         private string assetLoaderPath;
@@ -42,47 +42,7 @@
         }
         public override void Draw()
         {
-            int spacing = 70;
-            int yPosition = 60;
-
-            embedAssetsLabel = new Label { Text = "EmbeddedAssets.as", Location = new Point(10, yPosition), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
-            yPosition += spacing;
-            assetLoaderLabel = new Label { Text = "AssetLoader.as", Location = new Point(10, yPosition), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
-            yPosition += spacing;
-            cliAssetsLabel = new Label { Text = "Assets folder (client)", Location = new Point(10, yPosition), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
-            yPosition += spacing;
-            cliXmlLabel = new Label { Text = "XMLs folder (client)", Location = new Point(10, yPosition), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
-            yPosition += spacing;
-            srcXmlLabel = new Label { Text = "XMLs folder (server)", Location = new Point(10, yPosition), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
-
-            yPosition = 80;
-
-            embedAssetsBox = new TextBox { Location = new Point(10, yPosition), Width = 300, Height = 30, Text = embeddedAssetsPath };
-            yPosition += spacing;
-            assetLoaderBox = new TextBox { Location = new Point(10, yPosition), Width = 300, Height = 30, Text = assetLoaderPath };
-            yPosition += spacing;
-            cliAssetsBox = new TextBox { Location = new Point(10, yPosition), Width = 300, Height = 30, Text = clientAssetsPath };
-            yPosition += spacing;
-            cliXmlBox = new TextBox { Location = new Point(10, yPosition), Width = 300, Height = 30, Text = clientXmlsPath };
-            yPosition += spacing;
-            srcXmlBox = new TextBox { Location = new Point(10, yPosition), Width = 300, Height = 30, Text = serverXmlsPath };
-
-            yPosition = 72;
-
-            embedAssetsBrowse = new Button { Text = "Browse", Location = new Point(320, yPosition), Width = 80, Height = 28 };
-            yPosition += spacing;
-            assetLoaderBrowse = new Button { Text = "Browse", Location = new Point(320, yPosition), Width = 80, Height = 28 };
-            yPosition += spacing;
-            cliAssetsBrowse = new Button { Text = "Browse", Location = new Point(320, yPosition), Width = 80, Height = 28 };
-            yPosition += spacing;
-            cliXmlBrowse = new Button { Text = "Browse", Location = new Point(320, yPosition), Width = 80, Height = 28 };
-            yPosition += spacing;
-            srcXmlBrowse = new Button { Text = "Browse", Location = new Point(320, yPosition), Width = 80, Height = 28 };
-
-            continueButton = new Button { Text = "Continue", Width = 160, Height = 40 };
-            Tool.View.Controls.Add(continueButton);
-            continueButton.Location = new Point((Tool.screenSize.Width - continueButton.Width) / 2, Tool.screenSize.Height - continueButton.Height - 10);
-
+            Position();
             Tool.View.Controls.Add(embedAssetsLabel);
             Tool.View.Controls.Add(assetLoaderLabel);
             Tool.View.Controls.Add(cliAssetsLabel);
@@ -101,13 +61,41 @@
             Tool.View.Controls.Add(cliXmlBox);
             Tool.View.Controls.Add(srcXmlBox);
 
+            continueButton = new Button { Text = "Continue", Width = 160, Height = 40 };
+            Tool.View.Controls.Add(continueButton);
+            continueButton.Location = new Point((Tool.screenSize.Width - continueButton.Width) / 2, Tool.screenSize.Height - continueButton.Height - 10);
+            
+            base.Draw();
+        }
+        public override void AddListeners()
+        {
             embedAssetsBrowse.Click += new EventHandler(onBrowseEmbedAssets);
             assetLoaderBrowse.Click += new EventHandler(onBrowseAssetLoader);
             cliAssetsBrowse.Click += new EventHandler(onBrowseCliAssets);
             cliXmlBrowse.Click += new EventHandler(onBrowseCliXml);
             srcXmlBrowse.Click += new EventHandler(onBrowseSrcXml);
 
-            base.Draw();
+            base.AddListeners();
+        }
+        private void Position()
+        {
+            embedAssetsLabel = new Label { Text = "EmbeddedAssets.as", Location = new Point(10, 60), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
+            assetLoaderLabel = new Label { Text = "AssetLoader.as", Location = new Point(10, 130), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
+            cliAssetsLabel = new Label { Text = "Assets folder (client)", Location = new Point(10, 200), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
+            cliXmlLabel = new Label { Text = "XMLs folder (client)", Location = new Point(10, 270), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
+            srcXmlLabel = new Label { Text = "XMLs folder (server)", Location = new Point(10, 340), Width = 300, Font = FontFormats.Standard[1], AutoSize = true };
+
+            embedAssetsBox = new TextBox { Location = new Point(10, 80), Width = 300, Height = 30, Text = embeddedAssetsPath };
+            assetLoaderBox = new TextBox { Location = new Point(10, 150), Width = 300, Height = 30, Text = assetLoaderPath };
+            cliAssetsBox = new TextBox { Location = new Point(10, 220), Width = 300, Height = 30, Text = clientAssetsPath };
+            cliXmlBox = new TextBox { Location = new Point(10, 290), Width = 300, Height = 30, Text = clientXmlsPath };
+            srcXmlBox = new TextBox { Location = new Point(10, 360), Width = 300, Height = 30, Text = serverXmlsPath };
+
+            embedAssetsBrowse = new Button { Text = "Browse", Location = new Point(320, 72), Width = 80, Height = 28 };
+            assetLoaderBrowse = new Button { Text = "Browse", Location = new Point(320, 142), Width = 80, Height = 28 };
+            cliAssetsBrowse = new Button { Text = "Browse", Location = new Point(320, 212), Width = 80, Height = 28 };
+            cliXmlBrowse = new Button { Text = "Browse", Location = new Point(320, 282), Width = 80, Height = 28 };
+            srcXmlBrowse = new Button { Text = "Browse", Location = new Point(320, 352), Width = 80, Height = 28 };
         }
         private void onBrowseEmbedAssets(object sender, EventArgs e)
         {

@@ -10,3 +10,15 @@ C:\Users\Kevin\source\repos\RotMGTool\RotMGTool\obj\Debug\RotMGTool.pdb
 C:\Users\Kevin\source\repos\RotMGTool\RotMGTool\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Kevin\source\repos\RotMGTool\RotMGTool\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Kevin\source\repos\RotMGTool\RotMGTool\obj\Debug\RotMGTool.csproj.Up2Date
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\bin\Debug\RotMGTool.exe.config
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\bin\Debug\RotMGTool.exe
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\bin\Debug\RotMGTool.pdb
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\obj\Debug\RotMGTool.csproj.AssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\obj\Debug\RotMGTool.Properties.Resources.resources
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\obj\Debug\RotMGTool.csproj.GenerateResource.cache
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\obj\Debug\RotMGTool.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\obj\Debug\RotMGTool.csproj.Up2Date
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\obj\Debug\RotMGTool.exe
+C:\Users\Kevin\Documents\GitHub\RotMGTool\RotMGTool\obj\Debug\RotMGTool.pdb

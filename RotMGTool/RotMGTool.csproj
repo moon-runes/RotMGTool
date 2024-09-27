@@ -55,7 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="display\content\Startup.cs" />
-    <Compile Include="display\Screen.cs" />
+    <Compile Include="display\elements\TextField.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="display\Viewpoint.cs" />
     <Compile Include="display\View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +69,7 @@
     <Compile Include="managers\XmlManager.cs" />
     <Compile Include="Tool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\ColorConverter.cs" />
     <Compile Include="util\FontFormats.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

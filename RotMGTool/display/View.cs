@@ -1,4 +1,6 @@
-﻿using RotMGTool.display.content;
+﻿using RotMGTool.display;
+using RotMGTool.display.content;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -7,7 +9,7 @@ namespace RotMGTool
 {
     public partial class View : Form
     {
-        Startup Startup;
+        public Viewpoint Viewpoint;
         public View()
         {
             AutoScaleMode = AutoScaleMode.Font;
@@ -17,6 +19,7 @@ namespace RotMGTool
 
             InitializeAsync();
         }
+
         private async void InitializeAsync()
         {
             await Task.Run(() =>
@@ -28,17 +31,17 @@ namespace RotMGTool
 
         private void FirstTimeStartup()
         {
-            Startup = new Startup();
-            Startup.Draw();
+            Viewpoint = new Startup();
+            Viewpoint.Draw();
+            Viewpoint.AddListeners();
         }
+
         public string BrowseForFolder()
         {
             using (var folderDialog = new FolderBrowserDialog())
             {
                 if (folderDialog.ShowDialog() == DialogResult.OK)
-                {
                     return folderDialog.SelectedPath;
-                }
                 return string.Empty;
             }
         }
