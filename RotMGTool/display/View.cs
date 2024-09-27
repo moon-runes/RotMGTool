@@ -1,19 +1,18 @@
-﻿using RotMGTool.display;
-using RotMGTool.display.content;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace RotMGTool
+﻿namespace RotMGTool
 {
+    using RotMGTool.display;
+    using RotMGTool.display.content;
+    using RotMGTool.util;
+    using System.Drawing;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
     public partial class View : Form
     {
         public Viewpoint Viewpoint;
         public View()
         {
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = Tool.screenSize;
+            ClientSize = Window.Bounds;
             Text = "RotMGTool";
             Icon = new Icon("rotmgtool.ico");
 

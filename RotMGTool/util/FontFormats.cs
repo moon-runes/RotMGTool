@@ -25,12 +25,10 @@ public class FontFormats
     public Font GetFont(string type, FontSizes size)
     {
         int trueSize = (int)size;
-        Console.WriteLine((int)size);
         return FontsCache[type][trueSize];
     }
     private static Font[] CreateFonts(string fontName, FontStyle style)
     {
-        Console.WriteLine($"Checking for font: {fontName}");
         return new[]
         {
             CreateFont(fontName, 10, style),
@@ -42,12 +40,6 @@ public class FontFormats
     private static Font CreateFont(string fontName, int size, FontStyle style)
     {
         var availableFontName = FontFamily.Families.Any(f => f.Name == fontName) ? fontName : "Arial";
-
-        if (availableFontName != fontName)
-        {
-            Console.WriteLine($"Font '{fontName}' not found. Falling back to '{availableFontName}'.");
-        }
-
         return new Font(availableFontName, size, style);
     }
     public static Font[] Standard => FontsCache["Standard"];

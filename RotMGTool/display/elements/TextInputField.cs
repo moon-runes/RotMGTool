@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RotMGTool.util;
+using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Drawing;
@@ -17,7 +18,7 @@ namespace RotMGTool.display.elements
             Height = h;
         }
 
-        public void Init(string text, Viewpoint view = null, string center = "")
+        public void Init(string text, Viewpoint view = null)
         {
             if (view == null)
                 view = Tool.View.Viewpoint;
@@ -26,27 +27,19 @@ namespace RotMGTool.display.elements
 
             Text = text;
             view.AddToScreen(view, this);
-
-            Point middle = view.GetCenter(this, center);
-            switch (center)
-            {
-                case "x": Location = new Point(middle.X, Location.Y); break;
-                case "y": Location = new Point(Location.X, middle.Y); break;
-                case "xy": Location = middle; break;
-            }
         }
 
         public void SetPos(int x, int y, int xSpacing = 0, int ySpacing = 0)
         {
             if (xSpacing > 0)
             {
-                x += Tool.BufferX;
-                Tool.BufferX += xSpacing;
+                x += Window.BufferX;
+                Window.BufferX += xSpacing;
             }
             if (ySpacing > 0)
             {
-                y += Tool.BufferY;
-                Tool.BufferY += ySpacing;
+                y += Window.BufferY;
+                Window.BufferY += ySpacing;
             }
             Location = new Point(x, y);
         }

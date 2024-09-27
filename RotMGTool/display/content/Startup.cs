@@ -1,13 +1,15 @@
 ﻿namespace RotMGTool.display.content
 {
-    using System;
-    using System.Drawing;
-    using System.Windows.Forms;
     using Newtonsoft.Json;
+    using RotMGTool.display.elements;
+    using RotMGTool.util;
+    using System;
+    using System.ComponentModel.Design.Serialization;
+    using System.Drawing;
     using System.IO;
+    using System.Security.Principal;
     using Formatting = Newtonsoft.Json.Formatting;
     using Viewpoint = Viewpoint;
-    using RotMGTool.display.elements;
 
     internal class Startup : Viewpoint
     {
@@ -35,10 +37,6 @@
         private TextButton cliXmlBrowse;
         private TextButton srcXmlBrowse;
 
-        private TextButton continueButton;
-
-        static int spacing = 70;
-
         public Startup() : base(410, 450, "RotMGTool v1.0", "First-time startup.")
         {
             LoadDirectories();
@@ -48,7 +46,7 @@
             Labels();
             InputFields();
             Buttons();
-            Tool.ResetBuffer();
+            Window.ResetBuffer();
             base.Draw();
         }
 
@@ -63,9 +61,60 @@
             base.Listeners();
         }
 
+        private void Labels()
+        {
+            offset = Desc.Location.Y + Desc.Height;
+            Window.BufferY = offset;
+
+            embedAssetsLabel = new TextField("Standard");
+            embedAssetsLabel.SetPos(10, 0, 0, padding);
+            embedAssetsLabel.Init("EmbeddedAssets.as", this);
+
+            assetLoaderLabel = new TextField("Standard");
+            assetLoaderLabel.SetPos(10, 0, 0, padding);
+            assetLoaderLabel.Init("AssetLoader.as", this);
+
+            cliAssetsLabel = new TextField("Standard");
+            cliAssetsLabel.SetPos(10, 0, 0, padding);
+            cliAssetsLabel.Init("Assets folder (client)", this);
+
+            cliXmlLabel = new TextField("Standard");
+            cliXmlLabel.SetPos(10, 0, 0, padding);
+            cliXmlLabel.Init("XML folder (client)", this);
+
+            srcXmlLabel = new TextField("Standard");
+            srcXmlLabel.SetPos(10, 0, 0, padding);
+            srcXmlLabel.Init("XML folder (source)", this);
+        }
+
+        private void InputFields()
+        {
+            Window.BufferY = offset + 20;
+
+            embedAssetsBox = new TextInputField(300, 30);
+            embedAssetsBox.SetPos(10, 0, 0, padding);
+            embedAssetsBox.Init(embeddedAssetsPath + "1", this);
+
+            assetLoaderBox = new TextInputField(300, 30);
+            assetLoaderBox.SetPos(10, 0, 0, padding);
+            assetLoaderBox.Init(assetLoaderPath + "2", this);
+
+            cliAssetsBox = new TextInputField(300, 30);
+            cliAssetsBox.SetPos(10, 0, 0, padding);
+            cliAssetsBox.Init(clientAssetsPath + "3", this);
+
+            cliXmlBox = new TextInputField(300, 30);
+            cliXmlBox.SetPos(10, 0, 0, padding);
+            cliXmlBox.Init(clientXmlsPath + "4", this);
+
+            srcXmlBox = new TextInputField(300, 30);
+            srcXmlBox.SetPos(10, 0, 0, padding);
+            srcXmlBox.Init(serverXmlsPath + "5", this);
+        }
+
         private void Buttons()
         {
-            Tool.BufferY = 72;
+            Window.BufferY = offset + 12;
 
             string t = "Browse";
             embedAssetsBrowse = new TextButton(80, 28);
@@ -89,64 +138,11 @@
             srcXmlBrowse.SetPos(320, 0, 0, 70);
 
             t = "Continue";
-            continueButton = new TextButton(160, 40);
-            continueButton.Init(t, this, "x");
+            AddButton(160, 40, t);
+            SetButtonCoords("BottomCenter");
 
-            int y = Tool.screenSize.Height - continueButton.Height - 10;
-            continueButton.SetY(y);
-                    
-             /* If you set the x/y of an element to where it's position is dependent *
-              * on the element's height, then you have to Init() the text first.     */
-        }
-
-        private void Labels()
-        {
-            Tool.BufferY = 60;
-
-            embedAssetsLabel = new TextField("Standard");
-            embedAssetsLabel.SetPos(10, 0, 0, spacing);
-            embedAssetsLabel.Init("EmbeddedAssets.as", this);
-
-            assetLoaderLabel = new TextField("Standard");
-            assetLoaderLabel.SetPos(10, 0, 0, spacing);
-            assetLoaderLabel.Init("AssetLoader.as", this);
-
-            cliAssetsLabel = new TextField("Standard");
-            cliAssetsLabel.SetPos(10, 0, 0, spacing);
-            cliAssetsLabel.Init("Assets folder (client)", this);
-
-            cliXmlLabel = new TextField("Standard");
-            cliXmlLabel.SetPos(10, 0, 0, spacing);
-            cliXmlLabel.Init("XML folder (client)", this);
-
-            srcXmlLabel = new TextField("Standard");
-            srcXmlLabel.SetPos(10, 0, 0, spacing);
-            srcXmlLabel.Init("XML folder (source)", this);
-        }
-
-        private void InputFields()
-        {
-            Tool.BufferY = 80;
-
-            embedAssetsBox = new TextInputField(300, 30);
-            embedAssetsBox.SetPos(10, 0, 0, spacing);
-            embedAssetsBox.Init(embeddedAssetsPath, this);
-
-            assetLoaderBox = new TextInputField(300, 30);
-            assetLoaderBox.SetPos(10, 0, 0, spacing);
-            assetLoaderBox.Init(assetLoaderPath, this);
-
-            cliAssetsBox = new TextInputField(300, 30);
-            cliAssetsBox.SetPos(10, 0, 0, spacing);
-            cliAssetsBox.Init(clientAssetsPath, this);
-
-            cliXmlBox = new TextInputField(300, 30);
-            cliXmlBox.SetPos(10, 0, 0, spacing);
-            cliXmlBox.Init(clientXmlsPath, this);
-
-            srcXmlBox = new TextInputField(300, 30);
-            srcXmlBox.SetPos(10, 0, 0, spacing);
-            srcXmlBox.Init(serverXmlsPath, this);
+            /* If you set the x/y of an element to where it's position is dependent *
+             * on the element's height, then you have to Init() the text first.     */
         }
 
         private void onBrowseEmbedAssets(object sender, EventArgs e)
